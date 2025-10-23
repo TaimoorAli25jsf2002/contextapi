@@ -8,11 +8,12 @@ import React from "react";
  *
  * Note: Do NOT put API keys here. This footer is just informational.
  */
-export default function Footer({ repoUrl, liveUrl, live2Url }) {
+export default function Footer({ repoUrl, liveUrl, live2Url, live3Url, live4Url }) {
   const repo = repoUrl || import.meta.env.VITE_REPO_URL || "https://github.com/TaimoorAli25jsf2002/react-api-project";
   const live = liveUrl || import.meta.env.VITE_NETLIFY_URL || "https://propsdemo.netlify.app/";
     const live2 = live2Url || import.meta.env.VITE_NETLIFY_URL || "https://usecontextdemo.netlify.app/";
-
+     const live3 = live3Url || import.meta.env.VITE_NETLIFY_URL || "https://reduxappdemo.netlify.app/";
+      const live4 = live4Url || import.meta.env.VITE_NETLIFY_URL || "https://zustanddemo.netlify.app/";
   return (
     <footer className="bg-white border-t mt-8">
       <div className="container mx-auto px-1 py-1 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
@@ -49,6 +50,30 @@ export default function Footer({ repoUrl, liveUrl, live2Url }) {
                 UseContext Demo
               </a>
             ) : null}
+
+                   {live3 ? (
+              <a
+                href={live3}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-700 hover:text-blue-600 underline"
+              >
+                Redux Demo
+              </a>
+            ) : null}
+
+                   {live4 ? (
+              <a
+                href={live4}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-700 hover:text-blue-600 underline"
+              >
+                Zustand Demo
+              </a>
+            ) : null}
+
+
           </div>
           
 
